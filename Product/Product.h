@@ -9,16 +9,18 @@ typedef struct Product* adrNode;
 struct Product {
     string name;
     int jumlah;
-    Product *left;
-    Product *right;
+    adrNode left;
+    adrNode right;
 };
 
 adrNode createNode(string name, int jumlah);
 void insertProduct(adrNode &root, adrNode p);
 adrNode searchProduct(adrNode root, int jumlah);
-void preOrder(adrNode root);
 void inOrder(adrNode root);
+void preOrder(adrNode root);
 void postOrder(adrNode root);
 adrNode deleteNode(adrNode root, int jumlah);
+int getMinValue(adrNode root);
+int getMaxValue(adrNode root);
 
 #endif
